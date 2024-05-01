@@ -1,8 +1,7 @@
 <?php
-require_once 'conexion.php';
-include ('cnx_estudiantes.php');
-include ('css/style2.css');
-$user = $_SESSION ['username'];
+
+include ("conexion.php");
+
 ?>
 
 <div id="screen4" class="contenedor4">
@@ -56,4 +55,5 @@ $user = $_SESSION ['username'];
 							
 							</div>
 		
-						</div>
+						</div> 
+						

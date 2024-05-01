@@ -1,15 +1,11 @@
 
 <?php
 
-	include('header.php');
-	include('index.php');
+	include("conexion.php");
 ?>
 
-<main>
-<section>
-
 <div id="screen1" class="contenedor-creacion">
-					<!--Este es el form 1, cheque-->
+					
 						<div class="text-creacion">
 						
 							<label><a>Creacion</a></label>
@@ -22,7 +18,7 @@
 									<label><a>Cheques</a></label>
 							
 								</div>
-									<!--este es el div de No cheque y monto-->
+									
 									<div class="sub-contenedor1No">
 										<div class="text-No">
 										<label id="label1"> No. cheque</label>
@@ -37,7 +33,18 @@
 								
 									<div class="sub-contenedor2Paguese">
 										<label>Páguese a la orden de</label>
-										<input type="text"> 
+										<select class="select1">
+											<?php
+												$sql = "SELECT * FROM objeto";
+												$sql_query = mysqli_query($est, $sql);
+												while($row = mysqli_fetch_assoc($sql_query)){
+													$objeto = $row["detalle"];
+													echo "<option>$objeto</option>";
+
+												}
+											
+											?>
+										</select> 
 							
 									</div>
 									
@@ -66,7 +73,18 @@
 									<div class="sub-Objeto">
 									
 										<label>Objeto</label>
-										<input type="text">
+										<select class="select1">
+											<?php
+												$sql = "SELECT * FROM objeto_gasto";
+												$sql_query = mysqli_query($est, $sql);
+												while($row = mysqli_fetch_assoc($sql_query)){
+													$objeto = $row["detalle"];
+													echo "<option>$objeto</option>";
+
+												}
+											
+											?>
+										</select> 
 									
 									</div>
 									<div class="sub-Monto">
@@ -90,5 +108,3 @@
 							</div>
 						</div>
 						
-</section>
-</main>

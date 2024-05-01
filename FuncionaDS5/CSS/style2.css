@@ -53,6 +53,7 @@ input{
 	background: #c9c7c7;
 	border: 0;
 	font-weight: bold;
+	padding: 2px;
 }
 
 
@@ -356,6 +357,8 @@ section{
 	position: relative;
 	height: 45px;
 	margin: 10px 30px 10px 20px;
+	flex-direction: column;
+	gap: 10px;
 	
 	
 }

@@ -1,10 +1,8 @@
 <?php
-require_once 'conexion.php';
-include ('cnx_estudiantes.php');
-include ('css/style2.css');
-$user = $_SESSION ['username'];
-?>
 
+include ('conexion.php');
+
+?>
 
 <div id="screen5" class="contenedor5">
 						
@@ -35,11 +33,29 @@ $user = $_SESSION ['username'];
 									</div>
 									<div class="subcontenedor5-12">
 										<label>Mes:</label>
-										<input type="text">
+										<select class="select2">
+											<?php 
+												$sql = "SELECT * FROM meses";
+												$sqlquery = mysqli_query($est, $sql);
+												
+												while($rows = mysqli_fetch_assoc($sqlquery)){
+												$mes = $rows['nombre_mes'];
+												echo "<option>$mes</option>";
+
+												}
+											?>
+										</select> 
 									</div>
 									<div class="subcontenedor5-13">
 										<div class="subcontenedor5-131">
 											<label>Año</label>
+											<select class="select2">
+											<option>2020</option>
+											<option>2021</option>
+											<option>2022</option>
+											<option>2023</option>
+											<option>2024</option>
+											</select>
 											<input type="text" class="inputespacio1">
 											<input type="text">
 											<input type="text">
