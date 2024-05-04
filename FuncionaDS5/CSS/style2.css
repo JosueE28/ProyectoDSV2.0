@@ -6,12 +6,15 @@
 	
 	
 }
+label{
 
+	color: var(--secondary-color);
+}
 body{
 	
 	
 	max-height: 200vh;
-	background: rgb(204, 202, 202);
+	background: var(--six-color);
 }
 
 	a{
@@ -21,12 +24,12 @@ body{
 
 .header{
 	
-	background-color: #ff99008a;
+	background-color: var(--primary-color);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 20%;
-	color: black;
+	color: var(--secondary-color);
 	font-weight: bold;
 }
 
@@ -50,7 +53,7 @@ input{
 	border: 1px solid black;
 	font-size: 15px;
 	border-radius: 5px;
-	background: #c9c7c7;
+	background:var(--seven-color);
 	border: 0;
 	font-weight: bold;
 	padding: 2px;
@@ -73,7 +76,7 @@ input{
 
 .navbar li:hover{
 	transform: translateX(-2px);
-	background: #FFD393;
+	background:var(--third-color);
 	
 }
 .logo-bar .logo{
@@ -82,8 +85,55 @@ input{
 	
 }
 
+:root{
+	--primary-color: #ff990094;
+	--secondary-color:black;
+	--third-color: #ff990057;
+	--four-color:#ff99008a;
+	--five-color:white;
+	--six-color: rgb(204, 202, 202);
+	--seven-color:  #c9c7c7;
+}
+
+.dark{
+	--primary-color: rgba(92, 91, 91, 0.685);
+	--secondary-color:white;
+	--third-color: rgba(66, 64, 64, 0.959);
+	--four-color:rgba(66, 64, 64, 0.281);
+	--five-color: rgba(41, 40, 40, 0.959);
+	--six-color: rgb(46, 46, 46);
+	--seven-color:  #f7f7f7;
+}
+.icono{
+
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+#icon{
+	height: 30px;
+	width: 30px;
+	margin-right: 15px;
+	cursor: pointer;
+	
+
+}
+
+#icon:hover{
+
+	transform: scale(1.1);
+}
+
+img{
+	transition:transform 1s;
+
+}
+#img1:hover{
+ transform: scale(1.1);
+
+}
 .navbar a{
-	color: black;
+	color: var(--secondary-color);
 	font-size: 17px;
 	font-weight: bold;
 		
@@ -108,13 +158,13 @@ input{
 }
 
 .dropdown ul{
-	background: #ff99008a;
+	background: var(--third-color);
 	display: block;
 	
 }
 
 .dropdown li{
-	color: black;
+	color:var(--secondary-color);
 	font-weight: bold;
 	padding: 10px 20px;
 	transition-duration:0.1s; 
@@ -140,22 +190,26 @@ section{
 	
 }
 /*este es el form 1 creacion*/
+
+
+
 .contenedor-creacion{
 
-	box-shadow: 0 0 10px #ff99008a;
+	box-shadow: 0 0 10px var(--four-color);
 	height: 75%;
 	width: 75%;
 	border-radius: 5px;
 	display: none;
-	background: white;
+	background:var(--five-color);
 	flex-direction: column;
 }
 
 .text-creacion{
 	display: flex;
-	background: #ff99008a;
+	background:var(--primary-color);
 	height: 10%;
-    color: black;
+	padding-bottom: 10px;
+    color: var(--secondary-color);
     
 	
 }
@@ -337,7 +391,7 @@ section{
 .text-cheques{
 	display: flex;
 	height: 50px;
-	border-bottom: 3px solid #FF9800;
+	border-bottom: 3px solid var(--primary-color);
 	width: 90%;
 	margin: 20px 20px 0 20px;
 	border-radius: 3px;
@@ -401,8 +455,8 @@ section{
 	 height: 45px;
 	 width: 100px;
 	 border: none;
-	 background: #FF9800;
-	 color: black;
+	 background:var(--primary-color);
+	 color: var(--secondary-color);
 	 font-size: 17px;
 	 font-weight: bold;
 	 border-radius: 5px;
@@ -412,7 +466,7 @@ section{
 }
 
 .footer1 button:hover{
-	background: #C97301;
+	background: var(--third-color);
 	
 	
 }
@@ -426,17 +480,17 @@ section{
 	width: 70%;
 	display: none;
 	flex-direction: column;
-	box-shadow: 0 0 10px #ff99008a;
-    background: white;
+	box-shadow: 0 0 10px var(--four-color);
+    background: var(--five-color);
 }
 
 .text-anulacion{
 	display: flex;
-	background: #ff99008a;
+	background: var(--primary-color);
 	height: 18%;
 	width: 100%;
 	align-items: center;
-		
+	padding-bottom: 10px;	
 }
 
 .text-anulacion label{
@@ -445,7 +499,7 @@ section{
 	margin: 10px 5px 0px 4px;
 	padding: 0 0 0 15px;
 	font-weight: bold;
-	color: black;
+	color: var(--secondary-color);
 	
 }
 
@@ -483,16 +537,16 @@ section{
 
 }
 
-.subcontenedor-anulacion2 #input-anulacion2{
-	width: 90%;
-	height: 40%;
+.subcontenedor-anulacion2 #inputanulacion2{
+	width: 80%;
+	height: 25px;
 	border-radius: 10px;
 	margin: 1px 10px 5px 10px;
 	outline: none;
 	
 }
 
-.subcontenedor-anulacion2 #input-anulacion1{
+.subcontenedor-anulacion2 .date1{
 	width: 20%;
 	height: 25px;
 	border-radius: 5px;
@@ -501,26 +555,30 @@ section{
 	outline: none;
 
 }
-
+.subcontenedor-anulacion2 .date {
+	width: 50%;
+	height: 70px;
+}
 .subcontenedor-anulacion2 button{
 	
 	height: 45px;
 	width: 170px;
 	font-size: 17px;
 	border: none;
-	 background: #FF9800;
-	 color: black;
+	 background: var(--primary-color);
+	 color: var(--secondary-color);
 	 border-radius: 5px;
 	 cursor: pointer;
 	 font-weight: bold;
-	 
+	 margin-bottom:10px;
+	 margin-top:10px;
 	
 }
 
 .subcontenedor-anulacion2 button:hover{
 	
 	
-	background: #C97301;
+	background: var(--third-color);
 }
 .subcontenedor-anulacion2 .button1{
 	display: flex;
@@ -558,15 +616,15 @@ section{
 	width: 69px;
 	font-size: 17px;
 	border: none;
-	 background: #FF9800;
-	 color: black;
+	 background: var(--primary-color);
+	 color: var(--secondary-color);
 	 border-radius: 5px;
 	 cursor: pointer;
 	 font-weight: bold;
 }
 
 .subcontenedor-anulacion1text button:hover{
-	background: #C97301;
+	background: var(--third-color);
 	
 }
 
@@ -634,8 +692,8 @@ section{
 	width: 70%;
 	display: none;
 	flex-direction: column;
-	box-shadow: 0 0 10px #ff99008a;
-    background: white;
+	box-shadow: 0 0 10px var(--four-color);
+    background: var(--five-color);
 }
 
 
@@ -643,20 +701,20 @@ section{
 /*Contenedor 4*/
 
 	.contenedor4{
-		height: 60%;
-		width: 80%;
+		height: 70%;
+		width: 50%;
 		display: none;
 		flex-wrap: wrap;
-		box-shadow: 0 0 10px #ff99008a;
-		background: white;
+		box-shadow: 0 0 10px var(--four-color);
+		background: var(--five-color);
 	}
 	
 	
-	.contenedor4-title{
+	.contenedor4 .contenedor4-title{
 		
 		height: 18%;
-		width: 100%;
-		background: #ff99008a;
+		width: 100.5%;
+		background: var(--primary-color);
 		display: flex;
 		align-items: center;
 		
@@ -666,7 +724,7 @@ section{
 	
 	.contenedor4-title label{
 		font-size: 25px;
-		color: black;
+		color: var(--secondary-color);
 		font-weight: bold;
 		margin-left: 10px;
 		
@@ -686,6 +744,7 @@ section{
 		align-items: center;		
 		flex-direction: column;
 		
+
 	}
 	
 	.subcontenedor4-1 label{
@@ -693,6 +752,7 @@ section{
 		width: 80%;
 		font-size: 16px;
 		font-weight: bold;
+		
 	}
 	
 	.subcontenedor4-1 input{
@@ -758,8 +818,8 @@ section{
 		width: 69px;
         font-size: 17px;
         border: none;
-		background: #FF9800;
-		color: black;
+		background: var(--primary-color);
+		color: var(--secondary-color);
 		border-radius: 5px;
 		cursor: pointer;
 		font-weight: bold;
@@ -768,7 +828,7 @@ section{
 	}
 	
 	.subcontenedor4-2 button:hover{
-	background: #C97301;
+	background: var(--third-color);
 	
 }
 
@@ -779,8 +839,8 @@ section{
 		width: 80%;
 		display: none;
 		flex-wrap: wrap;
-		box-shadow: 0 0 10px #ff99008a;
-		background: white;
+		box-shadow: 0 0 10px var(--four-color);
+		background: var(--five-color);
 		
 	}
 	
@@ -788,10 +848,10 @@ section{
 		
 		height: 12%;
 		width: 100%;
-		background: #ff99008a;
+		background: var(--primary-color);
 		display: flex;
 		align-items: center;
-        color: black;
+        color: var(--secondary-color);
         font-weight: bold;
 		
 		
@@ -800,7 +860,7 @@ section{
 	
 	.contenedor5-title label{
 		font-size: 25px;
-		color: black;
+		color: var(--secondary-color);
 		font-weight: bold;
 		margin-left: 10px;
 		
@@ -961,8 +1021,8 @@ section{
 		padding: 5px;
 		font-size: 17px;
 		border: none;
-		background: #FF9800;
-		color: black;
+		background: var(--primary-color);
+		color: var(--secondary-color);
 		border-radius: 5px;
 		cursor: pointer;
 		font-weight: bold;
@@ -972,7 +1032,7 @@ section{
 	
 	.subcontenedor5-132  button:hover{
 		
-		background: #C97301;
+		background: var(--third-color);
 	}
 	
 	
@@ -1097,8 +1157,8 @@ section{
 	 height: 45px;
 	 width: 100px;
 	 border: none;
-	 background: #FF9800;
-	 color: black;
+	 background: var(--primary-color);
+	 color: var(--secondary-color);
 	 font-size: 17px;
 	 font-weight: bold;
 	 border-radius: 5px;
@@ -1108,7 +1168,7 @@ section{
 }
 
 .subcontenedor5-3 button:hover{
-	background: #C97301;
+	background: var(--third-color);
 	
 	
 }
