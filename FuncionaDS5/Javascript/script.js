@@ -1,8 +1,7 @@
 
-let pantallaActualId = '';
+let pantallaActualId = localStorage.getItem('pantallaActualId') || '';
 
 function mostrarPantalla(event, id) {
-    
     if (pantallaActualId) {
         const pantallaActual = document.getElementById(pantallaActualId);
         pantallaActual.style.display = 'none';
@@ -16,5 +15,7 @@ function mostrarPantalla(event, id) {
     pantallaMostrar.style.display = 'flex';
 
     pantallaActualId = id;
+    localStorage.setItem('pantallaActualId', id);
+
     event.preventDefault();
 }
